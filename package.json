@@ -10,5 +10,8 @@
     "node": ">=18"
   },
   "license": "UNLICENSED",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@upstash/redis": "^1.39.0"
+  }
 }
