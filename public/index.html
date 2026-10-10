@@ -1241,6 +1241,14 @@ document.addEventListener("click", e => {
     $("loginErr").textContent = "";
     $("regErr").textContent = "";
   }
+  // Checkout requires login fix
+  function openCheckout() {
+    closeCart();
+    $("signedIn").innerHTML = `Ordering as <strong>${esc(currentUser.name)}</strong> (${esc(currentUser.email)})`;
+    if (!$("name").value) $("name").value = currentUser.name;
+    if (!$("phone").value) $("phone").value = currentUser.phone;
+    if (!$("address").value) $("address").value = currentUser.address || "";
+    $("modal").classList.add("show");
 });
 
 function openFromHash() {
